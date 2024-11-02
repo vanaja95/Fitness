@@ -300,6 +300,9 @@ span{
     text-align: center;
     padding: 80px;
 }
+.video-clip .heading h2{
+    font-size: 6rem;
+}
 .videos {
     padding-top: 10.5rem;
 }
@@ -314,6 +317,10 @@ span{
     transition: all 0.5s ease;
     cursor: pointer;
 }
+.video-clip video:hover{
+    transform: scale(1.05);
+    border: 2px solid var(--main-color);
+}
 
 /* Responsive Mobile Styling */
 @media (max-width: 768px) {
@@ -323,7 +330,7 @@ span{
         gap: 2rem;
         padding-top: 50px;
     }
-    .heading {
+    .heading{
         font-size: 4rem; /* Smaller font for mobile */
         padding: 20px;
     }
@@ -353,29 +360,111 @@ span{
     }
 }
 
-/*community section code*/
+/*expert- trainers section code*/
+.expert-trainers{
+    background: var(--snd-bg-color);
+    min-height: auto;
+    height:70vh;
+}
+.expert-trainers .heading h2{
+    
+    font-size:6rem;
+    padding:50px;
+}
+.container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+   
 
-.people-content{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px,auto)) ;
-    align-items:center;
-    gap:2.3rem;
-    margin-top:4.1rem;
-}
-.box{
-    background:var(--bg-color);
-    border-radius:27px ;
-    border:1px solid transparent;
+  }
+  .card-wraper{
+    max-width:1500px;
+    margin:0 60px 35px;
+    padding:20px 10px;
+    overflow: hidden;
+  }
+  .cart-list .cart-item{
+    list-style:none;
+ 
+
+  }
+  
+  .card-list .card-item .card-link{
+    display: block;
+    user-select: none;
+    padding:18px;
+    border-radius:12px;
+    text-decoration: none;
+    background: var(--bg-color);
+    border:2px soild  transparent;
     box-shadow: 0 0 5px var(--main-color);
-    padding:20px;
     transition: all 0.5s ease;
-}
+    
+
+  }
+  .card-list .card-item .card-link:active{
+    cursor: grabbing;
+  }
+  .card-list .card-item .card-link:hover{
+    transform: scale(1.05);
+    border: 2px solid var(--main-color);
+  }
+  
+  .card-list .card-link .card-image {
+   width:100%;
+   aspect-ratio: 16/9;
+   object-fit: cover;
+   border-radius: 10px;
+
+  }
+  .card-list .card-link h3{
+    font-size: 3rem;
+    color:var(--main-color);
+    text-align: center;
+
+  }
+  .card-list .card-link h5{
+    font-size: 2rem;
+    color:var(--text-color);
+    text-align: center;
+
+  }
+  .card-wraper .swiper-pagination-bullet{
+    height: 13px;
+    width: 13px;
+    opacity:0.5;
+    background: var(--main-color);
+  }
+  .card-wraper .swiper-pagination-bullet:hover{
+    opacity: 1;
+
+  }
+  .card-wraper .swiper-slide-button{
+    color:var(--main-color);
+    margin-top: -35px;
+  }
+
+  @media screen and (max-width:768px) {
+   .expert-trainers{
+        height: auto;
+    }
+    .card-wraper {
+       margin: 0 10px 25px;
+
+    }
+    .card-wraper .swiper-slide-button{
+       display:none;
+     }
+  }
+  
+
 
 
 
 /* About Section for Desktop and Larger Screens */
 .about {
-    background: var(--snd-bg-color);
+    background: var(--bg-color);
 }
 .aboutus-img {
     display: flex;
@@ -389,8 +478,9 @@ span{
     position: absolute;
     justify-content: center;
     text-align: center;
-    font-size: 7rem;
-    color: var(--main-color);
+    font-size: 6rem;
+    color: var(--text-color);
+
 }
 .aboutus-img img {
     width: 2400px;
@@ -400,13 +490,13 @@ span{
     background: var(--text-color);
     position: absolute;
     padding: 20px;
-    bottom: -150px;
-    width: 55vw;
+    bottom: -200px;
+    width: 65vw;
     color: var(--bg-color);
     border-radius: 18px;
 }
 .about-us p {
-    font-size: 2rem;
+    font-size: 2.3rem;
 }
 .aboutus-content {
     padding: 280px;
@@ -425,9 +515,9 @@ span{
     transform: scale(1.01);
     border: 2px solid var(--main-color);
 }
-.about-content.heading {
+.about-content.heading h2 {
     text-align: center;
-    font-size: 6rem;
+    font-size: 5rem;
 }
 .about-content {
     padding-top: 190px;
@@ -488,11 +578,92 @@ span{
 }
 
 
+/* community section code */
+/* General .community styling for desktop */
+.community {
+    padding: 10rem;
+    min-height: 60vw;
+    background: var(--snd-bg-color);
+}
+
+.community .heading h2 {
+    font-size: 6rem;
+}
+
+.community-content {
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    align-items: center;
+    gap: 5rem;
+    margin-top: 4.1rem;
+}
+
+.community-box video {
+    width: 25vw;
+    height: 25vw;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 5px var(--main-color);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+/* Responsive styling for tablets */
+@media (max-width: 768px) {
+    .community {
+        padding: 5rem;
+        min-height: 80vw;
+    }
+
+    .community .heading h2 {
+        font-size: 4.5rem;
+    }
+
+    .community-content {
+        padding: 3rem;
+        gap: 3rem;
+    }
+
+    .community-box video {
+        width: 50vw;
+        height: 50vw;
+    }
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 480px) {
+    .community {
+        padding: 3rem;
+        min-height: 100vh;
+    }
+
+    .community .heading h2 {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    .community-content {
+        padding: 2rem;
+        gap: 2rem;
+        grid-template-columns: 1fr;
+    }
+
+    .community-box video {
+        width: 75vw;
+        height: 75vw;
+    }
+}
+
+
 /* pricing section code*/
 .plans{
-    background:var(--snd-bg-color);
+    background:var(--bg-color);
+     min-height: auto;
+     padding-bottom: 150px;
 }
 .plans-content{
+   
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     align-items:center;
@@ -501,7 +672,7 @@ span{
 }
 .box{
     padding:30px 30px 50px 30px;
-    height:42rem;
+    height:auto;
     background: var(--bg-color);
     border-radius: 28px;
     border:1px solid transparent;
@@ -548,6 +719,7 @@ transition: all 0.5s ease;
 /* contact us section code */
 
 .contact-sending {
+   
     display: flex;
     padding:10px;
     flex-direction: column;
@@ -956,6 +1128,41 @@ ul li a:hover{
 
 /* responsive design ode */
 
+
+/* Responsive styling for tablets */
+@media (max-width: 768px) {
+    header {
+        padding: 2.5rem 5%;
+        justify-content: space-between;
+        background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background */
+    }
+
+    .logo {
+        font-size: 1.5rem; /* Slightly smaller logo */
+        
+    }
+
+    #menu-icon {
+        display: block; /* Show menu icon */
+        padding:2rem;
+    }
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 480px) {
+    header {
+        padding: 1rem 4%;
+    }
+
+    .logo {
+        font-size: 2rem; /* Smaller logo for mobile */
+        /* Minimal padding */
+    }
+
+    #menu-icon {
+        display: block; /* Ensure menu icon is visible */
+    }
+}
 @media (max-width:1200px){
 
 }
