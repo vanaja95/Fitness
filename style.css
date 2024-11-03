@@ -367,8 +367,7 @@ span{
 /*expert- trainers section code*/
 .expert-trainers{
     background: var(--snd-bg-color);
-    min-height: auto;
-    height:70vh;
+   
 }
 .expert-trainers .heading h2{
     
@@ -471,7 +470,7 @@ span{
 /* About Section for Desktop and Larger Screens */
 .about {
     background: var(--bg-color);
-    padding:20rem;
+   
 }
 .aboutus-img {
     display: flex;
