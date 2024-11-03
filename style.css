@@ -235,11 +235,11 @@ span{
     }
 
     .counter-container .box h3 {
-        font-size: 3rem; /* Further reduction for smaller screens */
+        font-size: 4rem; /* Further reduction for smaller screens */
     }
 
     .counter-container .box p {
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
 }
 
@@ -364,7 +364,7 @@ span{
 .expert-trainers{
     background: var(--snd-bg-color);
     min-height: auto;
-    height:70vh;
+   
 }
 .expert-trainers .heading h2{
     
@@ -380,8 +380,8 @@ span{
   }
   .card-wraper{
     max-width:1500px;
-    margin:0 60px 35px;
-    padding:20px 10px;
+    margin:0 60px 135px;
+    padding:20px 50px;
     overflow: hidden;
   }
   .cart-list .cart-item{
@@ -416,6 +416,7 @@ span{
    aspect-ratio: 16/9;
    object-fit: cover;
    border-radius: 10px;
+   
 
   }
   .card-list .card-link h3{
@@ -443,6 +444,7 @@ span{
   .card-wraper .swiper-slide-button{
     color:var(--main-color);
     margin-top: -35px;
+   
   }
 
   @media screen and (max-width:768px) {
@@ -612,7 +614,7 @@ span{
 /* Responsive styling for tablets */
 @media (max-width: 768px) {
     .community {
-        padding: 5rem;
+        padding: 5rem 9;
         min-height: 80vw;
     }
 

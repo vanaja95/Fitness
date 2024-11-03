@@ -25,7 +25,7 @@ window.onscroll = () => {
 new Swiper('.card-wraper', {
    
   loop: true,
-  spaceBetween:30,
+  spaceBetween:55,
 
   // If we need pagination
   pagination: {
