@@ -232,6 +232,10 @@ span{
         grid-template-columns: 1fr;
         gap: 1rem; /* Reduced gap for smaller screens */
         align-items:center;
+       
+    }
+    .counter-container .box{
+        padding:10px 9;
     }
 
     .counter-container .box h3 {
@@ -467,6 +471,7 @@ span{
 /* About Section for Desktop and Larger Screens */
 .about {
     background: var(--bg-color);
+    padding:20rem;
 }
 .aboutus-img {
     display: flex;
@@ -716,6 +721,79 @@ transition: all 0.5s ease;
     transform:translateY(-5px) scale(1.03);
 }
 
+
+
+/* banner section code */
+
+.banner {
+    
+    min-height: auto;
+}
+.banner-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+.banner-img h2 {
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    font-size: 5rem;
+    color: var(--text-color);
+    position: absolute;
+    background: var(--snd-bg-color);
+    left: 55%;
+    border-radius: 22px;
+
+}
+.banner-img h2:hover{
+    border:2px solid var(--main-color);
+    transform:translateY(-5px) scale(1.03);
+}
+.banner-img img {
+    width: 1700px;
+    height: 700px;
+}
+
+
+    /* Mobile Screen Adjustments */
+    @media (max-width: 768px) {
+        .banner {
+            padding: 2rem 1rem; /* Reduce padding */
+            text-align: center; /* Center-align content for a cleaner look */
+        }
+    
+        .banner-img {
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .banner-img img {
+            width: 100%; /* Make image full-width */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover; /* Ensure the image covers the area without stretching */
+        }
+    
+        .banner .heading {
+            font-size: 4rem; /* Smaller font size for heading */
+            color: var(--text-color); /* Ensure color stands out on mobile */
+            position: absolute;
+            bottom: 10%; /* Position heading text near bottom */
+            left: 50%;
+            transform: translateX(-50%); /* Center horizontally */
+            padding: 0.5rem 1rem;
+            background: rgba(0, 0, 0, 0.5); /* Add semi-transparent background for readability */
+            border-radius: 0.5rem;
+        }
+    
+        .banner .heading span {
+            color: var(--main-color); /* Use a highlight color if available */
+        }
+    }
+    
 
 
 /* contact us section code */
