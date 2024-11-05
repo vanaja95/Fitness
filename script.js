@@ -57,9 +57,34 @@ new Swiper('.card-wraper', {
   }
 });
 
+// review section code
+let currentIndex = 0;
+const reviewSlides = document.querySelectorAll(".review-slide");
+const totalSlides = reviewSlides.length;
+const container = document.querySelector(".review-container");
+const reviewsPerPage = 3; // Number of reviews visible at a time
 
+function showReview() {
+    container.style.transform = `translateX(-${currentIndex * (100 / reviewsPerPage)}%)`;
+}
 
+document.getElementById("nextBtn").addEventListener("click", () => {
+    if (currentIndex < totalSlides - reviewsPerPage) {
+        currentIndex++;
+    } else {
+        currentIndex = 0; // Loop back to start
+    }
+    showReview();
+});
 
+document.getElementById("prevBtn").addEventListener("click", () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = totalSlides - reviewsPerPage; // Go to the last set of reviews
+    }
+    showReview();
+});
 
 
 

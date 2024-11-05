@@ -101,7 +101,7 @@ span{
 }
 .nav-btn:hover{
     background:var(--main-color);
-    color:var(--text-color);
+    color:var(--bg-color);
     box-shadow: 0 0 18px var(--main-color);
 }
 #menu-icon{
@@ -187,7 +187,7 @@ span{
     transition: 0.5s ease;
 }
 .btn:hover{
-    color:var(--text-color);
+   background: var(--text-color);
     box-shadow: 0 0 1rem var(--main-color);
 }
 
@@ -777,7 +777,7 @@ transition: all 0.5s ease;
         }
     
         .banner .heading {
-            font-size: 4rem; /* Smaller font size for heading */
+            font-size: 2.5rem; /* Smaller font size for heading */
             color: var(--text-color); /* Ensure color stands out on mobile */
             position: absolute;
             bottom: 10%; /* Position heading text near bottom */
@@ -793,110 +793,279 @@ transition: all 0.5s ease;
         }
     }
     
+/*review section code */
+
+.reviews {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.reviews-section {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    padding: 20px;
+}
+
+.review-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.review-slide {
+    min-width: calc(100% / 3); /* Each slide takes 1/3 of the container */
+    background: #f8f8f8;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.profile img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.profile h4 {
+    font-size: 18px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.review-content {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    justify-content: space-between;
+    transition: background 0.3s ease;
+}
+
+.nav-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
 
 
 /* contact us section code */
 
+/* General Contact Section Container */
 .contact-sending {
-   
     display: flex;
-    padding:10px;
-    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 40px;
+    background: linear-gradient(155deg, --bg-color, --snd-bg-color);
+    border-radius: 12px;
+    max-width: 1200px;
+    margin: 50px auto;
     align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    border-radius: 28px;
-    border:1px solid transparent;
-    box-shadow: 0 0 5px var(--main-color);
-    transition: all 0.5s ease;
-    cursor: pointer;
-    
-} 
-.contact-sending:hover{
-    transform: translatey(-5px) scale(1.04);
+    gap: 20px;
 }
 
-/* Header styling */
-.contact-boxs .heading h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    font-weight: 600;
+/* Left Section - Text Content */
+.contact-left {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-left h2 {
+    font-size: 5.5rem;
+    font-weight: 700;
+    color:--text-color;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.contact-left h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+}
+
+.contact-left p {
+    font-size: 2.5rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 10px 0 20px;
+}
+
+/* Button - Book Slot */
+.book-slot-button {
+    display:inline-block;
+    padding:1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 1rem;
+    box-shadow:none;
+    font-size:2rem;
+    color:var(--bg-color);
+    letter-spacing:0.1rem;
+    font-weight:600;
+    transition: 0.5s ease;
+}
+.book-slot-button:hover{
+    background: var(--text-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+
+/* Contact Form Section */
+.contact-boxs {
     text-align: center;
-    padding:20px;
+    flex-basis: 100%;
 }
 
-/* Form styling */
+.contact-boxs .heading {
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.contact-boxs .heading span {
+    color: var(--main-color);
+}
+
+/* Form Styling */
 #contact-form {
-    width: 100%;
     display: flex;
-    padding:1rem 15%;
     flex-direction: column;
-    transition: all 0.5s ease;
-   
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-/* Input fields styling */
 #contact-form input[type="text"],
 #contact-form input[type="tel"],
-#contact-form input[type="email"] {
-    padding: 12px;
-    margin: 8px 0;
+#contact-form input[type="email"]
+ {
+    padding: 14px;
+    border: 1px solid var(--main-color);
+    border-radius: 8px;
+    font-size: 2rem;
+    background-color:var(--bg-color);
+    transition:all 0.3s ease;
     color:var(--text-color);
-    border-radius: 5px;
-    border: 1px solid var(--snd-bg-color);
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-    transition: border 0.3s;
-    background: var(--bg-color);
-    border-radius: 20px;
-    border:1px solid transparent;
-    box-shadow: 0 0 5px var(--main-color);
-    transition: all 0.5s ease;
-    cursor: pointer;
 }
-#contact-form input[type="message"] {
-    padding: 12px;
-    margin: 8px 0;
-    background: var(--bg-color);
-    border-radius: 20px;
-    border:1px solid transparent;
-    box-shadow: 0 0 5px var(--main-color);
-    transition: all 0.5s ease;
-    cursor: pointer;
-    font-size: 16px;
-    padding-bottom: 80px;
-  }
+#contact-form .message {
+    padding: 14px;
+    border: 0.5px solid var(--main-color);
+    border-radius: 8px;
+    font-size: 2rem;
+    background-color:var(--bg-color);
+    transition:all 0.3s ease;
+    color:var(--text-color);
+    padding-bottom: 10rem;
+  
+}
 
+#contact-form input[type="text"]:focus,
+#contact-form input[type="tel"]:focus,
+#contact-form input[type="email"]:focus,
+#contact-form .message:focus {
+    border: 2px solid var(--main-color);
+    outline: none;
+    background-color: var(--bg-color);
+}
 
-
-/* Submit button styling */
 #contact-form .btn {
-    padding: 12px;
-    background-color:var(--main-color);
-    color: var(--bg-color);
+    display:inline-block;
+    padding:1rem 2.8rem;
+    background: var(--main-color);
     border-radius: 1rem;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-    width: 100%;
+    box-shadow:none;
+    font-size:2rem;
+    color:var(--bg-color);
+    letter-spacing:0.1rem;
+    font-weight:600;
+    transition: 0.5s ease;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+   
 }
 
 #contact-form .btn:hover {
-    background-color: var(--main-color);
-    color: var(--text-color);
+    background: var(--text-color);
+    box-shadow: 0 0 1rem var(--text-color);
 }
 
+#contact-form .btn:active {
+    transform: translateY(0.3);
+}
 
-
-/* Result message styling */
+/* Result Message Styling */
 #result {
     margin-top: 15px;
     font-size: 14px;
-    color:var(--text-color);
+    color:var(--main-color);
     text-align: center;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-sending {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contact-left, .contact-boxs {
+        padding: 0;
+        text-align: center;
+    }
+}
+
 
 /* Honeypot hidden */
 .hidden {
