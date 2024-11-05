@@ -57,6 +57,46 @@ new Swiper('.card-wraper', {
   }
 });
 
+
+
+
+
+new Swiper('.review-wraper', {
+   
+  loop: true,
+  spaceBetween:60,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // Responsive breakpoints
+  breakpoints:{
+    0:{ 
+      slidesPerView: 1
+
+    },
+    768:{ 
+      slidesPerView: 2
+
+    },
+    1024:{ 
+      slidesPerView: 3
+
+    },
+  }
+});
+
+
 // review section code
 let currentIndex = 0;
 const reviewSlides = document.querySelectorAll(".review-slide");
