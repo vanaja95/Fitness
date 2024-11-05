@@ -335,11 +335,11 @@ span{
         padding-top: 50px;
     }
     .heading{
-        font-size: 4rem; /* Smaller font for mobile */
+        font-size: 3rem; /* Smaller font for mobile */
         padding: 20px;
     }
     .services-content {
-        font-size: 2rem;
+        font-size: 1.8rem;
         line-height: 2.5rem;
         text-align: center;
         padding: 20px;
@@ -350,7 +350,7 @@ span{
         line-height: 3.5rem;
     }
     .services-content p {
-        font-size: 2rem;
+        font-size: 1.8rem;
         margin: 1rem 0;
     }
     .row img {
@@ -523,7 +523,7 @@ span{
 }
 .about-content.heading h2 {
     text-align: center;
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 .about-content {
     padding-top: 190px;
@@ -744,7 +744,7 @@ transition: all 0.5s ease;
     color: var(--text-color);
     position: absolute;
     background: var(--snd-bg-color);
-    left: 55%;
+    left: 51%;
     border-radius: 22px;
 
 }
@@ -1005,7 +1005,7 @@ transition: all 0.5s ease;
 }
 
 .contact-left h2 {
-    font-size: 5.5rem;
+    font-size: 4.5rem;
     font-weight: 700;
     color:--text-color;
     margin-bottom: 15px;
