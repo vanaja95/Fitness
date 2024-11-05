@@ -22,7 +22,7 @@
 
 }
 html{
-    font-size:62.5%;
+    font-size:55.5%;
     overflow-x:hidden;
     scroll-padding-top: 6.5rem;
     scroll-behavior: smooth;
@@ -72,7 +72,7 @@ span{
 
 }
 .navbar a{
-   font-size:2rem;
+   font-size:2.5rem;
    font-weight: 700;
    color:var(--text-color);
    margin-left:3rem;
@@ -93,7 +93,7 @@ span{
     color:var(--main-color);
     border:2px solid var(--main-color);
     border-radius: 1rem;
-    font-size:2rem;
+    font-size:2.5rem;
     font-weight: 600;
     transition: all 0.5s ease;
     margin-top:1rem;
