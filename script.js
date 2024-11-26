@@ -191,41 +191,27 @@ const typed = new Typed ('.multiple-text',{
 
 
 // booking section
-document.addEventListener("DOMContentLoaded", () => {
-    const bookingForm = document.querySelector(".booking-form");
-    const notification = document.getElementById("notification");
-  
-    bookingForm.addEventListener("submit", (event) => {
-      event.preventDefault(); // Prevent the default form submission
-  
-      // Get form values
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const date = document.getElementById("date").value;
-      const timeSlot = document.getElementById("time-slot").value;
-      const workoutType = document.getElementById("workout-type").value;
-  
-      // Validate form inputs
-      if (!name || !email || !date || !timeSlot || !workoutType) {
-        alert("Please fill in all the fields.");
-        return;
-      }
-  
-      // Show notification
-      showNotification("Your booking was successful!");
-  
-      // Clear form after submission
-      bookingForm.reset();
+
+function submitForm(event) {
+    event.preventDefault();
+    
+    const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSezTCGQQl1boIdPsKTCVrFt4lxR98hpCak3VLJMdF3Th5_ItQ/formResponse";
+    
+    const formData = new FormData();
+    formData.append("entry.2005620554", document.getElementById("name").value);
+    formData.append("entry.1045781291", document.getElementById("email").value);
+    formData.append("entry.1065046570", document.getElementById("phone").value);
+    formData.append("entry.1166974658", document.getElementById("appointmentDate").value);
+
+    fetch(googleFormURL, {
+        method: "POST",
+        mode: "no-cors",
+        body: formData
+    }).then(() => {
+        alert("Appointment Booked Successfully!");
+        document.getElementById("appointmentForm").reset();
+    }).catch((error) => {
+        alert("There was an error booking your appointment.");
+        console.error("Error:", error);
     });
-  
-    function showNotification(message) {
-      notification.textContent = message;
-      notification.classList.remove("hidden");
-  
-      // Hide notification after 3 seconds
-      setTimeout(() => {
-        notification.classList.add("hidden");
-      }, 3000);
-    }
-  });
-  
+}
