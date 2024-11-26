@@ -1254,7 +1254,7 @@ transition: all 0.5s ease;
 
 .booking-form-container {
     width: 100%;
-    max-height: auto;
+   
     max-width: 600px;
     margin: auto;
     background-color: var(--snd-bg-color);
@@ -1350,6 +1350,7 @@ input:focus {
         flex: 1; /* Use equal width for left and right sections */
         height: 200px; /* Set a fixed height for the image section */
     }
+   
 
     .left-section .fitness-image {
         height: 100%;
