@@ -1254,7 +1254,7 @@ transition: all 0.5s ease;
 
 .booking-form-container {
     width: 100%;
-    min-height: auto;
+    max-height: auto;
     max-width: 600px;
     margin: auto;
     background-color: var(--snd-bg-color);
