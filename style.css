@@ -1209,7 +1209,7 @@ transition: all 0.5s ease;
     justify-content: center;
     align-items: center;
     background-color:var(--bg-color);
-    color: #fff;
+
     
 }
 
@@ -1217,7 +1217,7 @@ transition: all 0.5s ease;
     display: flex;
     width: 100%;
     max-width: 2000px;
-    height: 90vh;
+    height: 110vh;
     background:var(--bg-color);
     border-radius: 45px;
     overflow: hidden;
