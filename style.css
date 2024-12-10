@@ -1417,7 +1417,7 @@ input:focus {
 
   
   .faqs{
-    max-width: 65%;
+    max-width: 75%;
     margin: auto;
     background: linear-gradient(155deg, --bg-color, --snd-bg-color);
     
@@ -1442,7 +1442,7 @@ input:focus {
     background-color:var(--snd-bg-color);
     color: var(--text-color);
     cursor: pointer;
-    font-size: 3rem;
+    font-size: 2.5rem;
     width: 100%;
     padding: 2rem 2.5rem;
    
