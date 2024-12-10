@@ -215,3 +215,9 @@ function submitForm(event) {
         console.error("Error:", error);
     });
 }
+
+
+
+// FAQ section script
+
+

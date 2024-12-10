@@ -55,7 +55,7 @@
     <section class="home" id="home">
         <div class="banner">
             <video autoplay loop muted plays-inline>
-                <source src="images/home.mp4" type="video/mp4">
+                <source src="images/home1.mp4" type="video/mp4">
             </video>
         <div class="home-content" data-aos="zoom-in">
             <h3>Build Your</h3>
@@ -338,7 +338,7 @@
 
         <div class="box">
             <h3> Basic Plan</h3>
-            <h3><span>₹2,500 - ₹6,500 per month</span></h3>
+            <h2><span>₹2,500 - ₹6,500 per month</span></h2>
             <ul>
                     <li>Limited class access (4-6/month).</li>
                     <li> Basic gym access (non-peak hours).</li>
@@ -350,7 +350,7 @@
         </div>
         <div class="box">
             <h3> Standard Plan</h3>
-            <h3> <span> ₹6,500 - ₹12,500 per month</span></h3>
+            <h2> <span> ₹6,500 - ₹12,500 per month</span></h2>
             <ul>
                    <li>Unlimited class access.</li>
                    <li> Full gym access (all hours).</li>
@@ -362,7 +362,7 @@
         </div>
         <div class="box">
             <h3>Premium Plan</h3>
-            <h3><span> ₹12,500 - ₹25,000+ per month</span></h3>
+            <h2><span> ₹12,500 - ₹25,000+ per month</span></h2>
             <ul>
                     <li>Unlimited classes, including specialty.</li>
                     <li>Personal training (2-3 sessions/week).</li> 
@@ -503,7 +503,93 @@
 </div>
 
 
-  
+<!--faq section code-->
+<section>
+    <div class="faqs"  data-aos="zoom-in-down">
+       
+        <h1 class="heading">FAQs</h1>
+    
+        <div class="faq">
+          <button class="question">
+            What is the best way to start a fitness journey?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="answer">
+            <p>
+                Start with simple goals and a balanced workout routine. Gradually increase intensity as you build consistency.
+ 
+                
+            </p>
+          </div>
+        </div>
+    
+        <div class="faq">
+          <button class="question">
+            How often should I work out?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="answer">
+            <p>
+                It depends on your fitness goals. For general health, aim for at least 150 minutes of moderate aerobic activity per week and strength training exercises twice a week. Listen to your body and allow time for recovery.
+            </p>
+          </div>
+        </div>
+    
+        <div class="faq">
+          <button class="question">
+            What should I eat before and after a workout?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="answer">
+            <p>
+                Before a workout, eat a light meal or snack rich in carbohydrates for energy. After a workout, focus on protein and carbohydrates to aid muscle recovery and replenish energy stores.
+                
+            </p>
+          </div>
+        </div>
+    
+        <div class="faq">
+          <button class="question">
+            Can I lose weight without going to the gym?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="answer">
+            <p>
+                Absolutely! Weight loss is primarily about creating a calorie deficit. You can achieve this through home workouts, outdoor activities, and maintaining a healthy diet. Bodyweight exercises, resistance bands, and walking are great options.
+            </p>
+          </div>
+        </div>
+    
+        <div class="faq">
+          <button class="question">
+            How do I stay motivated to work out?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="answer">
+            <p>
+                Set clear and achievable goals, track your progress, and celebrate small wins. Find a workout buddy, join a fitness community, or hire a coach for accountability. Most importantly, make fitness enjoyable by choosing activities you love.
+            </p>
+          </div>
+        </div>
+    
+        <div class="faq">
+          <button class="question">
+            What’s the best way to recover from a workout?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="answer">
+            <p>
+                Stay hydrated, eat protein-rich meals, and stretch. Rest and quality sleep are vital for recovery.
+            </p>
+          </div>
+        </div>
+      </div>
+
+</section>
+
+
+
+
 
     
    <!--footer section code-->
@@ -565,6 +651,27 @@
         offset: 300,
         duration:800,
      });
+   </script>
+
+   <script>
+var acc = document.getElementsByClassName("question");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          this.parentElement.classList.toggle("active");
+
+          var pannel = this.nextElementSibling;
+
+          if (pannel.style.display === "block") {
+            pannel.style.display = "none";
+          } else {
+            pannel.style.display = "block";
+          }
+        });
+      }
+
    </script>
 
   <script src="script.js"></script>
