@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Trainer Appointment Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select {
+            margin-top: 5px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .checkbox-group {
+            margin-top: 10px;
+        }
+        .checkbox-group label {
+            font-weight: normal;
+            margin-right: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .top-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+        .nav-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .nav-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Book an Appointment</h2>
+        <form id="appointmentForm" onsubmit="submitForm(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+    
+            <label for="appointmentDate">Appointment Date:</label>
+            <input type="date" id="appointmentDate" name="appointmentDate" required>
+    
+            <label for="timeSlot">Time Slot</label>
+            <select id="timeSlot" name="timeSlot" required>
+                <option value="">Select a time slot</option>
+                <option value="morning(8am-10am)">Morning(8am-10am)</option>
+                <option value="afternoon(12pm-2pm)">Afternoon(12pm-2pm)</option>
+                <option value="evening(5pm-7pm)">Evening(5pm-7pm)</option>
+                <option value="other">Other</option>
+            </select>
+    
+            <label for="workoutType">Workout Type</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="yoga" name="workoutType" value="Yoga">
+                <label for="yoga">Yoga</label>
+    
+                <input type="checkbox" id="strength" name="workoutType" value="Strength Training">
+                <label for="strength">Strength Training</label>
+    
+                <input type="checkbox" id="cardio" name="workoutType" value="Cardio">
+                <label for="cardio">Cardio</label>
+    
+                <input type="checkbox" id="pilates" name="workoutType" value="Pilates">
+                <label for="pilates">Pilates</label>
+    
+                <input type="checkbox" id="other" name="workoutType" value="Other">
+                <label for="other">Other</label>
+            </div>
+    
+            <button type="submit">Book Appointment</button>
+        </form>
+    </div>
+    
+
+    <script>
+        // Replace with your actual script URL
+        const scriptURL = "https://script.google.com/macros/s/AKfycbxMMxsiVFDKRPeyrVYWVkGR85AzgFBdywDecuIhq5UEN732YXRjLdnYl_9gc2Beiv5X0Q/exec";
+    
+        function submitForm(event) {
+            event.preventDefault();
+    
+            const formData = new FormData(document.getElementById('appointmentForm'));
+            const data = new URLSearchParams();
+    
+            // Map form fields to Google Apps Script expected fields
+            data.append('name', formData.get('name'));
+            data.append('email', formData.get('email'));
+            data.append('phone', formData.get('phone'));
+            data.append('appointmentDate', formData.get('appointmentDate'));
+            data.append('timeSlot', formData.get('timeSlot'));
+    
+            // Handle multiple checkbox values
+            const workoutTypes = formData.getAll('workoutType');
+            data.append('workoutType', workoutTypes.join(', '));
+    
+            // Send form data to Google Apps Script
+            fetch(scriptURL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: data.toString(),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert('Your appointment has been successfully booked!');
+                    document.getElementById('appointmentForm').reset();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Failed to submit the form. Please try again.');
+                });
+        }
+    </script>
+</body>
+</html>
