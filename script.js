@@ -151,9 +151,6 @@ document.getElementById('contact-form').addEventListener('submit', function(even
       console.log("Response received:", result); // Debugging: Log the result
       if (result.success) {
           document.getElementById('result').textContent = "Thank you! Your message has been sent successfully.";
-          setTimeout(function(){
-            document.getElementById('result').textContent = ""
-    },3000)
           form.reset(); // Reset the form after successful submission
       } else {
           document.getElementById('result').textContent = "Oops! Something went wrong. Please try again.";
@@ -215,9 +212,3 @@ function submitForm(event) {
         console.error("Error:", error);
     });
 }
-
-
-
-// FAQ section script
-
-
