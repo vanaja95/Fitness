@@ -1375,6 +1375,10 @@ button:hover {
     #menu-icon{
         display:none;
     }
+    
+    .footer-col {
+        width: 50%;
+    }
 
 }
 @media (max-width: 450px) {
@@ -1384,6 +1388,9 @@ button:hover {
     }
     .top-btn {
         display: none;
+    }
+    .footer-col {
+        width: 100%;
     }
 }
 
