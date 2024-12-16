@@ -1363,34 +1363,67 @@ button:hover {
     background-color: var(--text-color);
     color: var(--bg-color);
 }
-/* Media Queries for Mobile Responsiveness */
+/* Small screens (max-width: 768px) */
 @media (max-width: 768px) {
     .content-wrapper {
         flex-direction: column;
+        top: 10%;
     }
 
-    .left-content, .form-container {
+    .left-content {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .left-content h1 {
+        font-size: 3rem;
+    }
+
+    .left-content p {
+        font-size: 1.6rem;
+    }
+
+    .form-container {
+        padding: 2rem;
+        margin: 1rem;
         max-width: 100%;
     }
-    #menu-icon{
-        display:none;
-    }
-    
-    .footer-col {
-        width: 50%;
+
+    input, select, button {
+        font-size: 1.4rem;
+        padding: 0.8rem;
     }
 
+    label {
+        font-size: 1.6rem;
+    }
 }
-@media (max-width: 450px) {
-   
-    #menu-icon{
-        display:block;
+
+/* Extra small screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .content-wrapper {
+        top: 5%;
     }
-    .top-btn {
-        display: none;
+
+    .left-content h1 {
+        font-size: 2.5rem;
     }
-    .footer-col {
-        width: 100%;
+
+    .left-content p {
+        font-size: 1.4rem;
+    }
+
+    .form-container {
+        padding: 1.5rem;
+    }
+
+    input, select, button {
+        font-size: 1.2rem;
+        padding: 0.6rem;
+    }
+
+    button {
+        font-size: 1.5rem;
     }
 }
 
