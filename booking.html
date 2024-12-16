@@ -26,9 +26,6 @@
     <!--header section code-->
     
      <header>
-       
-           
-
             <a href="#home" class="logo">GYM <span>Training</span></a>
 
             <i class='bx bx-menu' id="menu-icon"></i>
@@ -50,39 +47,65 @@
      </header>
 
      <!--booking section code-->
-
-  <section class="booking">
-    <div class="booking-content">
-      <div class="left-section" data-aos="zoom-in-down">
-        <img src="images/booking slots.jpg" alt="Fitness" class="fitness-image">
-    </div>
-    <div class="right-section" data-aos="zoom-in-up">
-        <div class="booking-form-container">
-            <h2>book your<span> slots</span> </h2>
-            <form id="appointmentForm" onsubmit="submitForm(event)">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name"placeholder="Enter your name "required>
-    
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email"  required>
-    
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter your number" required>
-    
-                <label   for="appointmentDate"> Date </label>
-                <input type="date" id="appointmentDate" name="appointmentDate" required>
-    
-                <button class="book-now-btn" type="submit">Book Now</button>
-            </form>
-    
+<section class="booking">
+    <div class="book-container">
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="">
+        <div class="content-wrapper">
+            <div class="left-content">
+                <h1>Transform Your Body, Transform Your Life</h1>
+                <p>Welcome to our professional personal training service. We're dedicated to helping you achieve your fitness goals through personalized workout plans and expert guidance.</p>
+                <p>Book your appointment now and take the first step towards a healthier, stronger you!</p>
+            </div>
+            <div class="form-container">
+                <h2>Book an Appointment</h2>
+                <form id="appointmentForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+            
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+            
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+            
+                    <label for="appointmentDate">Appointment Date:</label>
+                    <input type="date" id="appointmentDate" name="appointmentDate" required>
+            
+                    <label for="timeSlot">Time Slot</label>
+                    <select id="timeSlot" name="timeSlot" required>
+                        <option value="">Select a time slot</option>
+                        <option value="morning(8am-10am)">Morning(8am-10am)</option>
+                        <option value="afternoon(12pm-2pm)">Afternoon(12pm-2pm)</option>
+                        <option value="evening(5pm-7pm)">Evening(5pm-7pm)</option>
+                        <option value="other">Other</option>
+                    </select>
+            
+                    <label for="workoutType">Workout Type</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="yoga" name="workoutType" value="Yoga">
+                        <label for="yoga">Yoga</label>
+            
+                        <input type="checkbox" id="strength" name="workoutType" value="Strength Training">
+                        <label for="strength">Strength Training</label>
+            
+                        <input type="checkbox" id="cardio" name="workoutType" value="Cardio">
+                        <label for="cardio">Cardio</label>
+            
+                        <input type="checkbox" id="pilates" name="workoutType" value="Pilates">
+                        <label for="pilates">Pilates</label>
+            
+                        <input type="checkbox" id="other" name="workoutType" value="Other">
+                        <label for="other">Other</label>
+                    </div>
+            
+                    <button type="submit">Book Appointment</button>
+                </form>
+            </div>
         </div>
     </div>
+    
 
-
-    </div>
-   
 </section>
-
    
    <!--footer section code-->
    <footer>
@@ -106,12 +129,12 @@
     <div class="footer-col">
         <h4>Quick Links</h4>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#trainers">Trainers</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#plans">plans</a></li>
-            <li><a href="#contact">contact</a></li>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#trainers">Trainers</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#plans">plans</a></li>
+            <li><a href="index.html#contact">contact</a></li>
         </ul>
     </div>
     <div class="footer-col">
@@ -144,6 +167,28 @@
         duration:800,
      });
    </script>
+
+<script>
+
+
+
+
+
+
+
+//booking section
+
+
+    document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Add form submission logic here
+        alert('Appointment booked successfully!');
+    });
+
+    document.getElementById('menu-icon').addEventListener('click', function() {
+        document.querySelector('.navbar').classList.toggle('active');
+    });
+</script>
 
   <script src="script.js"></script>
 </body>

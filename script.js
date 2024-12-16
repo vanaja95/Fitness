@@ -189,26 +189,12 @@ const typed = new Typed ('.multiple-text',{
 
 // booking section
 
-function submitForm(event) {
-    event.preventDefault();
-    
-    const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSezTCGQQl1boIdPsKTCVrFt4lxR98hpCak3VLJMdF3Th5_ItQ/formResponse";
-    
-    const formData = new FormData();
-    formData.append("entry.2005620554", document.getElementById("name").value);
-    formData.append("entry.1045781291", document.getElementById("email").value);
-    formData.append("entry.1065046570", document.getElementById("phone").value);
-    formData.append("entry.1166974658", document.getElementById("appointmentDate").value);
+document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  // Add form submission logic here
+  alert('Appointment booked successfully!');
+});
 
-    fetch(googleFormURL, {
-        method: "POST",
-        mode: "no-cors",
-        body: formData
-    }).then(() => {
-        alert("Appointment Booked Successfully!");
-        document.getElementById("appointmentForm").reset();
-    }).catch((error) => {
-        alert("There was an error booking your appointment.");
-        console.error("Error:", error);
-    });
-}
+document.getElementById('menu-icon').addEventListener('click', function() {
+  document.querySelector('.navbar').classList.toggle('active');
+});

@@ -1212,206 +1212,190 @@ transition: all 0.5s ease;
 
 /* booking sssection code*/
 
-
-.booking {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:var(--bg-color);
-
-    
-}
-
-.booking-content {
-    display: flex;
-    width: 100%;
-    max-width: 2000px;
-    height: 110vh;
-    background:var(--bg-color);
-    border-radius: 45px;
-    overflow: hidden;
-    padding-top:60px;
-    
-}
-
-/* Make the left section (image) take up more space */
-.left-section {
-    flex:1.5;  /* Increased from 1 to 1.5 to take up more space */
-    background:var(--bg-color);
-    overflow: hidden;
-   
-}
-
-.left-section .fitness-image {
-    margin-top: 4rem;
-    width: 90%;
-    height: 90%;
-    border-radius: 40px;
-    object-fit: cover;
-    opacity: 0.85;
-   
-   
-}
-
-.right-section {
-    flex: 1;  /* Kept as 1 to keep the form narrower */
-    display: flex;
-    align-items: center;
-    padding:20px;
-   
-}
-
-.booking-form-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1000px;
-    margin:auto;
-    background-color: var(--snd-bg-color);
-    padding: 3rem;
-    border: 2px solid var(--main-color);
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      
+section.booking{
+        min-height:145vh;
+        padding:2rem 8%  2rem;
+       
        
 }
-
-.booking-form-container h2 {
-  
-    font-size: 4rem;
-    color: var(--text-color);
-    text-align: center;
-    margin-bottom: 10px;
+.book-container img{
+    position:absolute;
+    top: 20%;
+    left:0;
+    width:100%;
+    height: 135%; 
+    min-height: auto;
 }
 
+.content-wrapper {
+    display:flex;
+    flex: 1;
+    position:absolute;
+    top:20%;
+    left:0;
+    width:100%;
+    /* height: 120%; */
+    min-height: auto;
+  
+  
+}
 
+.left-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    text-align: center;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+}
+
+.left-content h1 {
+    font-size: 4rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+}
+
+.left-content p {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    max-width: 60rem;
+}
+
+.form-container {
+    flex: 1;
+    max-width: 50rem;
+    min-height: auto;
+    padding: 4rem;
+    background-color: rgba(26, 26, 26, 0.9);
+    border-radius: 1rem;
+    margin: 2rem;
+}
+
+.form-container h2 {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
 
 form {
     display: flex;
     flex-direction: column;
-
 }
+
 label {
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
     color: var(--text-color);
-    font-size:2rem;
-    display: block;
-}
-input {
-    padding: 0.5rem;
-    margin-bottom:2rem;
-    border: 2px solid var(--bg-color);
-    border-radius: 8px;
-    background-color:#c6ced1;
+    margin-bottom: 0.5rem;
 }
 
-input:focus {
+input, select {
+    font-size: 1.6rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--main-color);
+    border-radius: 0.5rem;
+    color: var(--text-color);
+}
+
+select {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border: 1px solid var(--main-color);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+    padding-right: 2.5rem;
+}
+
+select:focus {
     border-color: var(--main-color);
-    outline: none;
-    color:var(--bg-color)
-   
+    box-shadow: 0 0 0 2px rgba(12, 239, 239, 0.2);
 }
-#name,#email,#phone,#appointmentDate{
+
+select option {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+select option[value=""] {
+    color: #666;
+}
+
+
+select::-ms-expand {
+    display: none;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.checkbox-group label {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-left: 0.5rem;
+}
+
+button {
     font-size: 2rem;
-   
-}
-
-#name,#email,#phone:hover{
-    color: var(--bg-color);
-}
-
-.book-now-btn {
-    display:inline-block;
-    width: 100%;
-    padding: 10px;
-    box-shadow:none;
+    padding: 1rem;
     background-color: var(--main-color);
     color: var(--bg-color);
-    font-size: 2.5rem;
-    font-weight: bold;
     border: none;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     cursor: pointer;
-    letter-spacing:0.1rem;
-    transition: 0.5s ease; 
-    font-weight:600;
-   
+    transition: all 0.3s ease;
 }
 
-.book-now-btn:hover {
-    background: var(--text-color);
-    box-shadow: 0 0 1rem var(--main-color);
-}
-
-
-.hidden {
-    display: none;
+button:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
 }
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
-    .booking-content {
-        flex-direction: column; 
-        height: auto; /* Adjust height for mobile */
+    .content-wrapper {
+        flex-direction: column;
     }
 
-    .left-section {
-        flex: 1; /* Use equal width for left and right sections */
-        height: 200px; /* Set a fixed height for the image section */
+    .left-content, .form-container {
+        max-width: 100%;
     }
+    #menu-icon{
+        display:none;
+    }
+
+}
+@media (max-width: 450px) {
    
-
-    .left-section .fitness-image {
-        height: 100%;
-      
-        border-radius: 20px; 
+    #menu-icon{
+        display:block;
     }
-
-    .right-section {
-        flex: 1; /* Use equal width for left and right sections */
-        padding: 10px; /* Reduce padding */
+    .top-btn {
+        display: none;
     }
+}
 
-    .booking-form-container h2 {
-        font-size: 2rem; /* Reduce heading size */
-    }
-    .booking-form-container {
-        padding: 2rem; /* Reduce padding for smaller screens */
-        border-radius: 8px; /* Slightly smaller border radius */
+@media (max-width: 350px) {
+    .form-container {
+        padding: 2rem;
     }
 
-    .booking-form-container h2 {
-        font-size: 2rem; /* Smaller font size for the heading */
-        margin-bottom: 15px;
+    .checkbox-group {
+        flex-direction: column;
     }
-
-    label {
-        font-size:1rem; /* Adjust label font size */
-    }
-
-    input {
-        padding: 1rem; /* Reduce padding for inputs */
-        margin-bottom:1.5rem; /* Reduce margin for inputs */
-        font-size: 1.5rem; /* Adjust input font size */
-    }
-
-    #name, #email, #phone, #appointmentDate {
-        font-size: 1.5rem; /* Keep input font size consistent */
-    }
-
-    .book-now-btn {
-        font-size: 1.5rem; /* Smaller font size for the button */
-        padding: 8px; /* Reduce padding for the button */
-        border-radius: 0.8rem; /* Slightly smaller border radius */
-    }
-
-    .book-now-btn:hover {
-        box-shadow: 0 0 0.8rem var(--main-color); /* Adjust hover shadow */
-    }
-    .notification {
-        font-size: 1.5rem; /* Adjust notification font size */
-    }
+    
 }
 
 /* faq section code */
@@ -1427,19 +1411,6 @@ input:focus {
     
    
   }
-  
-  /* .faqs > p,
-  .faqs > h1 {
-    margin: 20rem ;
-    text-align: center;
-   
-  } */
-  
-  /* .faqs > h1 {
-    letter-spacing: 3px;
-
-  } */
-  
   
    .question {
    
@@ -1614,6 +1585,9 @@ ul li a:hover{
     #menu-icon {
         display: block; /* Ensure menu icon is visible */
     }
+    .nav-btn{
+        display:block;
+    }
 }
 @media (max-width:1200px){
 
@@ -1715,11 +1689,21 @@ ul li a:hover{
         width:70vw;
         margin-top:4rem;
     }
+    .menu-icon{
+        display:block;
+    }
+    
    
 }
 @media(max-width:450){
     html{
         font-size:50%
+    }
+    .menu-icon{
+        display:block;
+    }
+    .top-btn {
+        display: none;
     }
 }
 @media(max-width: 740px){
@@ -1738,6 +1722,7 @@ ul li a:hover{
     .footer-col{
         width: 100%;
     }
+   
    
 }
 
