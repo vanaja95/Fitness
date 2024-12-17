@@ -110,7 +110,7 @@ span{
     cursor:pointer;
     display:none;
 }
-.menu-icon.bx-x {
+#menu-icon.bx-x {
     /* Styles for the menu icon when active */
     color: var(--main-color); /* Change icon color */
 }
@@ -1696,7 +1696,7 @@ ul li a:hover{
    }
    
 }
-@media(max-width:786px){
+@media(max-width:768px){
     .home{
         flex-direction:column;
     }
@@ -1729,12 +1729,7 @@ ul li a:hover{
     .services h2{
         margin-bottom:3rem;
     }
-    .navbar{
-        display:block;
-    }
-    .menu-icon{
-        display:none;
-    }
+   
 }
 @media(max-width:617px){
     .home-img img{
@@ -1745,9 +1740,7 @@ ul li a:hover{
         width:70vw;
         margin-top:4rem;
     }
-    .menu-icon{
-        display:block;
-    }
+  
     
    
 }
@@ -1755,7 +1748,7 @@ ul li a:hover{
     html{
         font-size:50%
     }
-    .menu-icon{
+    #menu-icon{
         display:block;
     }
     .top-btn {

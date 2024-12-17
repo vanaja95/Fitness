@@ -22,29 +22,30 @@
 
     <title>Fitness</title>
 </head>
-<body>
-    <!--header section code-->
-    
-     <header>
-            <a href="#home" class="logo">GYM <span>Training</span></a>
-
-            <i class='bx bx-menu' id="menu-icon"></i>
-
-            <ul class = "navbar">
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#trainers">Trainers</a></li>
-                <li><a href="index.html#plans">Plans</a></li>
-                <li><a href="index.html#contact">contact</a></li>
-            
-            </ul>
-
-            <div class="top-btn">
-                <a href="booking.html" class="nav-btn">Join Us</a>
-            </div>
+ <!--header section code-->
+ <header  class="header">
         
-     </header>
+    <a href="#home" class="logo">GYM <span>Training</span></a>
+
+    <i class='bx bx-menu' id="menu-icon"></i>
+
+    <ul class = "navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#trainers">Trainers</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#contact">contact</a></li>
+    
+    </ul>
+
+    <div class="top-btn">
+        <a href="booking.html" class="nav-btn">Join Us</a>
+    </div> 
+
+</header>
+
+
 
      <!--booking section code-->
 <section class="booking">
@@ -61,23 +62,23 @@
                 <form id="appointmentForm">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
-            
+
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
-            
+
                     <label for="phone">Phone Number:</label>
                     <input type="tel" id="phone" name="phone" required>
-            
+
                     <label for="appointmentDate">Appointment Date:</label>
                     <input type="date" id="appointmentDate" name="appointmentDate" required>
-            
+                                
                     <label for="timeSlot">Time Slot</label>
                     <select id="timeSlot" name="timeSlot" required>
                         <option value="">Select a time slot</option>
                         <option value="morning(8am-10am)">Morning(8am-10am)</option>
                         <option value="afternoon(12pm-2pm)">Afternoon(12pm-2pm)</option>
                         <option value="evening(5pm-7pm)">Evening(5pm-7pm)</option>
-                        <option value="other">Other</option>
+                        <!-- <option value="other">Other</option> -->
                     </select>
             
                     <label for="workoutType">Workout Type</label>
@@ -94,8 +95,8 @@
                         <input type="checkbox" id="pilates" name="workoutType" value="Pilates">
                         <label for="pilates">Pilates</label>
             
-                        <input type="checkbox" id="other" name="workoutType" value="Other">
-                        <label for="other">Other</label>
+                        <input type="checkbox" id="work-out other" name="workoutType" value="Other">
+                        <label for="workout-other">Other</label>
                     </div>
             
                     <button type="submit">Book Appointment</button>
@@ -172,10 +173,6 @@
 
 
 
-
-
-
-
 //booking section
 
 
@@ -189,6 +186,7 @@
         document.querySelector('.navbar').classList.toggle('active');
     });
 </script>
+
 
   <script src="script.js"></script>
 </body>
