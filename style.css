@@ -1491,6 +1491,7 @@ button:hover {
   .a-active,
   .question:hover {
     background-color: var(--snd-bg-color);
+    color:var(--text-color)
   }
   .answer {
     padding: 0 2rem 2.5rem 2rem;
