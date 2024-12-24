@@ -171,6 +171,4 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
   alert('Appointment booked successfully!');
 });
 
-document.getElementById('menu-icon').addEventListener('click', function() {
-  document.querySelector('.navbar').classList.toggle('active');
-});
+
