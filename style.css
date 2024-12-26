@@ -1616,7 +1616,7 @@ ul li a:hover{
     header {
         padding: 2.5rem 5%;
         justify-content: space-between;
-        background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background */
+        background-color: rgba(0, 0, 0, 1); /* Slightly darker background */
     }
 
     .logo {
