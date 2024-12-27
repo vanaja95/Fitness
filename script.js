@@ -163,6 +163,16 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 
 
 
+ // FAQ toggle logic
+ document.querySelectorAll('.question').forEach(button => {
+  button.addEventListener('click', () => {
+    const faq = button.closest('.faq');
+    faq.classList.toggle('active');
+  });
+});
+
+
+
 // booking section
 
 document.getElementById('appointmentForm').addEventListener('submit', function(event) {

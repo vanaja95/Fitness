@@ -9,7 +9,7 @@
     box-sizing: border-box;
     outline:none; border:none;
     text-decoration: none;
-    text-transform: capitalize;
+   
     transform: all .2s linear;
     list-style:none;
 
@@ -195,28 +195,34 @@ span{
 
 
 /* counter section code */
-.counter {
-    min-height: 30vh;
+section.counter {
+    min-height:30vh;
     background: var(--bg-color);
-    padding-bottom: 150px;
-
+    padding-bottom: 75px;
+    align-content: center;
+    
 }
 
 .counter-container {
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25px,auto)) ;
-    align-items:center;
-    padding-top:150px;
-    gap:2.3rem;
-    margin-top:4.1rem;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr)) ;
+    gap:20px; */
+    /* align-items:center; */
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:70px;
+    padding-top:150px; 
+    margin-top:2.1rem;
    
 }
 
 .counter-container .box {
     width: 100%;
     height: 100%;
-    max-width: 20rem; /* Adjust box width on smaller screens */
+    max-width: 25rem; /* Adjust box width on smaller screens */
     text-align: center;
 }
 
@@ -266,17 +272,17 @@ span{
 }
 .heading {
     text-align: center;
-    font-size: 6.5rem;
+    font-size: 5rem;
     padding: 40px;
 }
 .services-content {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 550;
     line-height: 3rem;
 }
 .services-content h4 {
     padding-top: 70px;
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 4.5rem;
 }
 .services-content p {
@@ -291,7 +297,7 @@ span{
     width: 45vw;
     border-radius: 27px;
     border: 1px solid transparent;
-    box-shadow: 0 0 5px var(--main-color);
+    /* box-shadow: 0 0 5px var(--main-color); */
     transition: all 0.3s ease;
     cursor: pointer;
 }
@@ -310,7 +316,7 @@ span{
     padding: 80px;
 }
 .video-clip .heading h2{
-    font-size: 6rem;
+    font-size: 5rem;
 }
 .videos {
     padding-top: 10.5rem;
@@ -376,7 +382,7 @@ span{
 }
 .expert-trainers .heading h2{
     
-    font-size:6rem;
+    font-size:5rem;
     padding:50px;
 }
 .container {
@@ -599,7 +605,7 @@ span{
 }
 
 .community .heading h2 {
-    font-size: 6rem;
+    font-size: 5rem;
 }
 
 .community-content {
@@ -812,7 +818,7 @@ transition: all 0.5s ease;
 }
 
 .reviews-section .heading h2 {
-    font-size: 6rem;
+    font-size: 5rem;
     padding: 50px;
 }
 
@@ -1016,7 +1022,7 @@ transition: all 0.5s ease;
 }
 
 .contact-left h2 {
-    font-size: 4.5rem;
+    font-size: 4rem;
     font-weight: 700;
     color:--text-color;
     margin-bottom: 15px;
@@ -1067,7 +1073,7 @@ transition: all 0.5s ease;
 }
 
 .contact-boxs .heading {
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: bold;
     color: var(--text-color);
     margin-bottom: 10px;
@@ -1211,13 +1217,123 @@ transition: all 0.5s ease;
 
 
 
+/* faq section code */
+
+  /* Wrapper and General Styles */
+
+  section.faq-container{
+    min-height: 35vh;
+   
+  }
+
+
+  .faqs-section {
+   
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+     margin: 0 auto; 
+    max-width: 1200px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .faqs-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+  
+  }
+  
+  .heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 5rem;
+    color: var(--text-color);
+  }
+  
+  .faq {
+    border: 1px solid var(--main-color);
+    border-radius: 8px;
+    background: var(--snd-bg-color);
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq button {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 2rem;
+    padding: 10px;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+  }
+  
+  .faq button:hover {
+    /* color: var(--bg-color); */
+  }
+  
+  .faq .answer {
+    display: none;
+    margin-top: 10px;
+    font-size: 2rem;
+    color: var(--text-color);
+  }
+  
+  .faq.active .answer {
+    display: block;
+  }
+  
+  /* Media Query for Tablets (768px and smaller) */
+  @media (max-width: 768px) {
+    .faqs-section {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .faqs-column {
+      width: 100%;
+    }
+  
+    .heading {
+      font-size: 1.8rem;
+    }
+  }
+  
+  /* Media Query for Mobile Phones (480px and smaller) */
+  @media (max-width: 480px) {
+    body {
+      padding: 10px;
+    }
+  
+    .heading {
+      font-size: 1.5rem;
+    }
+  
+    .faq button {
+      font-size: 0.9rem;
+    }
+  
+    .faq .answer {
+      font-size: 0.8rem;
+    }
+  }
+
 
 /* booking sssection code*/
 
 section.booking{
     margin-top: 0; /* Remove unnecessary top margin */
     padding-top: 1rem;
-    min-height:140vh;
+    min-height:130vh;
     padding:2rem 8%  2rem;
        
        
@@ -1456,66 +1572,6 @@ button:hover {
         font-size: 1rem;
     }
 }
-/* faq section code */
-
-  /* Wrapper and General Styles */
-  
-
-  
-  .faqs{
-    max-width: 75%;
-    margin: auto;
-    background: linear-gradient(155deg, --bg-color, --snd-bg-color);
-    
-   
-  }
-  
-   .question {
-   
-    background-color:var(--snd-bg-color);
-    color: var(--text-color);
-    cursor: pointer;
-    font-size: 2.5rem;
-    width: 100%;
-    padding: 2rem 2.5rem;
-   
-    transition: 0.4s;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-  }
-  
-  .question i {
-    font-size: 1.6rem;
-  }
-  
-  .a-active,
-  .question:hover {
-    background-color: var(--snd-bg-color);
-    color:var(--text-color)
-  }
-  .answer {
-    padding: 0 2rem 2.5rem 2rem;
-    background-color:var(--text-color);
-    overflow: hidden;
-    display: none;
-  }
-  .answer p {
-    color: var(--bg-color);
-    font-size: 2.5rem;
-    line-height: 1.4;
-  }
-  
-  .faq {
-    border:1px solid var(--main-color);
-    color:var(--text-color);
-    margin: 20px;
-  }
-  .faq.a-active {
-    border: none;
-  }
-  
 
 
 

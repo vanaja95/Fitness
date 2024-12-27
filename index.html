@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   
+
    
     <!--font awesome cdn link-->
 
@@ -482,8 +483,8 @@
         <input type="hidden" name="access_key" value="cab390fb-923a-4fb9-862c-6dae01430222">
         
         <input type="text" name="name" class="name" placeholder="Your Name" required>
-        <input type="tel" name="contact" class="contact" placeholder="Your contact" required>
-        <input type="email" name="email" class="email" placeholder="Your Email" required>
+        <input type="text" id="phone" name="phone" class="contact" pattern="\d{10}"  placeholder="Your contact"  required>
+        <input type="email" id="email" name="email" class="email" placeholder="Your Email" required>
         <input type="message" name="message" class="message" placeholder="Your Message" required>
         
         <!-- Honeypot Spam Protection -->
@@ -501,91 +502,72 @@
 
 
 <!--faq section code-->
-<section>
-    <div class="faqs"  data-aos="zoom-in-down">
-       
-        <h1 class="heading">FAQs</h1>
-    
+<section class="faq-container">
+    <h1 class="heading">FAQs</h1>
+    <div class="faqs-section">
+      <div class="faqs-column">
+        <!-- Left column questions -->
         <div class="faq">
           <button class="question">
             What is the best way to start a fitness journey?
             <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="answer">
-            <p>
-                Start with simple goals and a balanced workout routine. Gradually increase intensity as you build consistency.
- 
-                
-            </p>
+            <p>Start with simple goals and a balanced workout routine. Gradually increase intensity as you build consistency.</p>
           </div>
         </div>
-    
         <div class="faq">
           <button class="question">
             How often should I work out?
             <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="answer">
-            <p>
-                It depends on your fitness goals. For general health, aim for at least 150 minutes of moderate aerobic activity per week and strength training exercises twice a week. Listen to your body and allow time for recovery.
-            </p>
+            <p>It depends on your fitness goals. For general health, aim for at least 150 minutes of moderate aerobic activity per week.</p>
           </div>
         </div>
-    
         <div class="faq">
           <button class="question">
             What should I eat before and after a workout?
             <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="answer">
-            <p>
-                Before a workout, eat a light meal or snack rich in carbohydrates for energy. After a workout, focus on protein and carbohydrates to aid muscle recovery and replenish energy stores.
-                
-            </p>
+            <p>Before a workout, eat a light meal or snack rich in carbohydrates for energy. After a workout, focus on protein and carbs.</p>
           </div>
         </div>
-    
+      </div>
+
+      <div class="faqs-column">
+        <!-- Right column questions -->
         <div class="faq">
           <button class="question">
             Can I lose weight without going to the gym?
             <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="answer">
-            <p>
-                Absolutely! Weight loss is primarily about creating a calorie deficit. You can achieve this through home workouts, outdoor activities, and maintaining a healthy diet. Bodyweight exercises, resistance bands, and walking are great options.
-            </p>
+            <p>Weight loss is primarily about creating a calorie deficit. You can achieve this through home workouts and a healthy diet.</p>
           </div>
         </div>
-    
         <div class="faq">
           <button class="question">
             How do I stay motivated to work out?
             <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="answer">
-            <p>
-                Set clear and achievable goals, track your progress, and celebrate small wins. Find a workout buddy, join a fitness community, or hire a coach for accountability. Most importantly, make fitness enjoyable by choosing activities you love.
-            </p>
+            <p>Set clear goals, track progress, and celebrate small wins. Make fitness enjoyable by choosing activities you love.</p>
           </div>
         </div>
-    
         <div class="faq">
           <button class="question">
             What’s the best way to recover from a workout?
             <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="answer">
-            <p>
-                Stay hydrated, eat protein-rich meals, and stretch. Rest and quality sleep are vital for recovery.
-            </p>
+            <p>Stay hydrated, eat protein-rich meals, and stretch. Rest and quality sleep are vital for recovery.</p>
           </div>
         </div>
       </div>
-
-</section>
-
-
-
+    </div>
+  </section>
 
 
     
@@ -651,7 +633,7 @@
    </script>
 
    <script>
-var acc = document.getElementsByClassName("question");
+    var acc = document.getElementsByClassName("question");
       var i;
 
       for (i = 0; i < acc.length; i++) {
@@ -681,5 +663,6 @@ var acc = document.getElementsByClassName("question");
    </script>
 
   <script src="script.js"></script>
+  
 </body>
 </html>
