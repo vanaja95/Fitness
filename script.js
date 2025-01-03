@@ -132,34 +132,115 @@ document.getElementById("prevBtn").addEventListener("click", () => {
 // contact us section 
 
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent default form submission
-  
-  const form = event.target;
-  const formData = new FormData(form); // Collect form data
-  
-  // Add debugging statement
-  console.log("Form is being submitted...");
 
-  fetch(form.action, {
-      method: form.method,
-      body: formData,
-      headers: {
-          'Accept': 'application/json'
-      }
-  }).then(response => response.json()).then(result => {
-      console.log("Response received:", result); // Debugging: Log the result
-      if (result.success) {
-          document.getElementById('result').textContent = "Thank you! Your message has been sent successfully.";
-          form.reset(); // Reset the form after successful submission
-      } else {
-          document.getElementById('result').textContent = "Oops! Something went wrong. Please try again.";
-      }
-  }).catch(error => {
-      console.log("Error occurred:", error); // Debugging: Log the error
-      document.getElementById('result').textContent = "Oops! There was an error submitting the form.";
-  });
-});
+  //       const form = document.getElementById("contactForm");
+  //       form.addEventListener("submit", function (event) {
+  //         event.preventDefault(); // Prevent form submission
+
+          
+  //        // Clear previous errors
+  //         document.getElementById("nameError").textContent = "";
+  //         document.getElementById("emailError").textContent = "";
+  //         document.getElementById("phoneError").textContent = "";
+  //         document.getElementById("messageError").textContent = "";
+    
+  //         // Get form values
+  //         const name = document.getElementById("name").value.trim();
+  //         const email = document.getElementById("email").value.trim();
+  //         const phone = document.getElementById("phone").value.trim();
+  //         const message = document.getElementById("message").value.trim();
+    
+  //         let isValid = true;
+    
+  //         // Validate Name
+  //         if (name === "") {
+  //           document.getElementById("nameError").textContent = "Name is required.";
+  //           document.getElementById("name").classList.add('error');
+  //           isValid = false;
+  //         } else if (name.length < 3) {
+  //           document.getElementById("nameError").textContent = "Name must be at least 3 characters long.";
+  //           isValid = false;
+  //         }
+    
+  //         // Validate Email
+  //         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  //         if (email === "") {
+  //           document.getElementById("emailError").textContent = "Email is required.";
+  //           isValid = false;
+  //         } else if (!emailRegex.test(email)) {
+  //           document.getElementById("emailError").textContent = "Please enter a valid email address.";
+  //           isValid = false;
+  //         }
+    
+  //         // Validate Phone
+  //         const phoneRegex = /^[0-9]{10}$/;
+  //         if (phone === "") {
+  //           document.getElementById("phoneError").textContent = "Phone number is required.";
+  //           isValid = false;
+  //         } else if (!phoneRegex.test(phone)) {
+  //           document.getElementById("phoneError").textContent = "Phone number must contain only digits and be at least 10 digits long.";
+  //           isValid = false;
+  //         }
+    
+  //         // Validate Message
+  //         if (message === "") {
+  //           document.getElementById("messageError").textContent = "Message is required.";
+  //           isValid = false;
+  //         } else if (message.length < 10) {
+  //           document.getElementById("messageError").textContent = "Message must be at least 10 characters long.";
+  //           isValid = false;
+  //         }
+    
+  //   //       fetch(form.action, {
+  //   //       method: form.method,
+  //   //       body: formData,
+  //   //       headers: {
+  //   //           'Accept': 'application/json'
+  //   //       }
+  //   //   }).then(response => response.json()).then(result => {
+  //   //       console.log("Response received:", result); // Debugging: Log the result
+  //   //       if (result.success) {
+  //   //           document.getElementById('result').textContent = "Thank you! Your message has been sent successfully.";
+  //   //           form.reset(); // Reset the form after successful submission
+  //   //       } else {
+  //   //           document.getElementById('result').textContent = "Oops! Something went wrong. Please try again.";
+  //   //       }
+  //   //   }).catch(error => {
+  //   //       console.log("Error occurred:", error); // Debugging: Log the error
+  //   //       document.getElementById('result').textContent = "Oops! There was an error submitting the form.";
+  //   //   });
+  //     if (isValid) {
+          
+  //       const form = event.target;
+  // const formData = new FormData(form); // Collect form data
+  
+  // // Add debugging statement
+  // console.log("Form is being submitted...");
+
+  // fetch(form.action, {
+  //     method: form.method,
+  //     body: formData,
+  //     headers: {
+  //         'Accept': 'application/json'
+  //     }
+  // }).then(response => response.json()).then(result => {
+  //     console.log("Response received:", result); // Debugging: Log the result
+  //     if (result.success) {
+  //         document.getElementById('result').textContent = "Thank you! Your message has been sent successfully.";
+  //         form.reset(); // Reset the form after successful submission
+  //       setTimeout(() => {
+  //           document.getElementById('result').style.display = 'none';
+  //       }, (2000)); 
+  //     } else {
+  //         document.getElementById('result').textContent = "Oops! Something went wrong. Please try again.";
+  //     }
+  // }).catch(error => {
+  //     console.log("Error occurred:", error); // Debugging: Log the error
+  //     document.getElementById('result').textContent = "Oops! There was an error submitting the form.";
+  // });
+  //         } 
+  //       });
+  
 
 
 
@@ -174,11 +255,3 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 
 
 // booking section
-
-document.getElementById('appointmentForm').addEventListener('submit', function(event) {
-  event.preventDefault();
-  // Add form submission logic here
-  alert('Appointment booked successfully!');
-});
-
-
